@@ -55,7 +55,7 @@ const ProfileById: React.FC = () => {
         ) : (
           <Card className="p-4 max-w-[300px] w-full flex gap-2 flex-col rounded-2xl">
             <h2 className="font-medium text-lg text-wrap">
-              Didn't find what you were looking for?
+              Didn `&apos;` t find what you were looking for?
             </h2>
 
             <Button
@@ -96,7 +96,7 @@ const ProfileById: React.FC = () => {
               />
 
               <span className="text-[#515151] text-sm">
-                Say what’s in your mind
+                Say what `&apos;` s in your mind
               </span>
             </Card>
             <div className="flex gap-3">
