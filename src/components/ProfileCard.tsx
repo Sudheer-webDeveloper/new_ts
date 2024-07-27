@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { MapPin } from "phosphor-react/dist";
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { MapPin } from 'phosphor-react';
 
 interface UserInfo {
   userId: string;
   name: string;
-  profileImg: { src: string };
+  profileImg: string | StaticImageData; 
   isVerified: boolean;
   city?: string;
 }
@@ -26,7 +26,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ userInfo, verifiedButton }) =
       >
         <Image
           alt={userInfo.name}
-          src={userInfo?.profileImg.src || ""}
+          src={userInfo.profileImg}
           width={80}
           height={80}
           className="object-contain"
@@ -37,7 +37,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ userInfo, verifiedButton }) =
             <span
               className={`bg-[#DDF2E4] text-[#1AA94A] w-[60px] flex items-center justify-center text-[10px] p-1 rounded-sm`}
             >
-              {userInfo.isVerified ? "Verified" : "Un Verified"}
+              {userInfo.isVerified ? 'Verified' : 'Un Verified'}
             </span>
           )}
 
@@ -46,7 +46,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ userInfo, verifiedButton }) =
             <span className="text-[#515151] mr-[1px]">
               <MapPin size={15} />
             </span>
-            {userInfo?.city}
+            {userInfo.city}
           </p>
         </div>
       </div>
@@ -61,4 +61,3 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ userInfo, verifiedButton }) =
 };
 
 export default ProfileCard;
-
