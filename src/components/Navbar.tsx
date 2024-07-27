@@ -10,6 +10,8 @@ import { checkPath } from "@/Constants/Constants";
 import { useStateContext } from "@/contexts/StateContext";
 import PostModal from "./PostModal";
 import { List } from "lucide-react";
+import LogoIcon from "../../public/assets/logo";
+
 
 const Navbar: React.FC = () => {
   const { pathName, dummyUser, postModal } = useStateContext();
@@ -19,24 +21,7 @@ const Navbar: React.FC = () => {
       <header className="w-full flex flex-col gap-2 ">
         <nav className="flex w-full justify-between items-center pr-2 bg-mainBg ">
           <section className="flex gap-2 items-center ">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M16.3757 1.50124C18.3773 -0.500411 21.6227 -0.500413 23.6243 1.50124L38.4988 16.3757C40.5004 18.3773 40.5004 21.6227 38.4988 23.6243L23.6243 38.4988C21.6227 40.5004 18.3773 40.5004 16.3757 38.4988L1.50124 23.6243C-0.500412 21.6227 -0.500413 18.3773 1.50124 16.3757L16.3757 1.50124ZM30.55 15.6756L34.8745 20L20 34.8745L5.12554 20L20 5.12554L26.9257 12.0512L19.1991 19.7778L15.355 15.9337L11.7307 19.558L19.1991 27.0264L30.55 15.6756Z"
-                fill="#574C95"
-              />
-              <path
-                d="M34.8745 20L30.55 15.6756L19.1991 27.0264L11.7307 19.558L15.355 15.9337L19.1991 19.7778L26.9257 12.0512L20 5.12554L5.12554 20L20 34.8745L34.8745 20Z"
-                fill="white"
-              />
-            </svg>
+          <LogoIcon width={50} height={50} fillColor="#574C95" />
             <span className="text-[32px] max-lg:text-[25px] text-sidebar ">Profolo</span>
           </section>
 
@@ -72,24 +57,7 @@ const Navbar: React.FC = () => {
                 WTA Studios
               </span>
               <span className="absolute -right-3 top-[15%] ">
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 32 32"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M13.1006 1.20099C14.7019 -0.400329 17.2981 -0.400331 18.8994 1.20099L30.799 13.1006C32.4003 14.7019 32.4003 17.2981 30.799 18.8994L18.8994 30.799C17.2981 32.4003 14.7019 32.4003 13.1006 30.799L1.20099 18.8994C-0.400329 17.2981 -0.40033 14.7019 1.20099 13.1006L13.1006 1.20099ZM24.44 12.5404L27.8996 16L16 27.8996L4.10043 16L16 4.10043L21.5406 9.641L15.3593 15.8223L12.284 12.7469L9.38454 15.6464L15.3593 21.6211L24.44 12.5404Z"
-                    fill="#1AA94A"
-                  />
-                  <path
-                    d="M27.8996 16L24.44 12.5404L15.3593 21.6211L9.38454 15.6464L12.284 12.7469L15.3593 15.8223L21.5406 9.641L16 4.10043L4.10043 16L16 27.8996L27.8996 16Z"
-                    fill="white"
-                  />
-                </svg>
+              <LogoIcon width={40} height={40} fillColor="#574C95" />
               </span>
             </div>
           </section>
