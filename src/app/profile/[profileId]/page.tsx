@@ -132,7 +132,7 @@ const ProfileById: React.FC = () => {
         {loading ? (
           <CardSkeleton length={2} />
         ) : (
-          <ArrayOfCards heading={"People You May Know"} data={peopleYouMayKnow}  />
+          <ArrayOfCards heading={"People You May Know"} data={sugesstedJobs}   />
         )}
       </div>
     </section>
