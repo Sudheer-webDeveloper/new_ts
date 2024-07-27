@@ -122,6 +122,7 @@ const ProfileById: React.FC = () => {
       </div>
 
       <div className="min-w-[300px] flex-col max-xl:hidden flex gap-6 sticky top-4 ">
+        
         {loading ? (
           <CardSkeleton length={3} />
         ) : (

@@ -5,7 +5,8 @@ import Image from "next/image";
 interface CardData {
   img?: string;
   company_name: string;
-  [key: string]: any;
+  name?: string; // Optional additional fields
+  // Other optional fields
 }
 
 interface ArrayOfCardsProps {
@@ -15,8 +16,8 @@ interface ArrayOfCardsProps {
 
 const ArrayOfCards: FC<ArrayOfCardsProps> = ({ heading, data }) => {
   return (
-    <Card className="p-4 rounded-2xl w-full font-medium ">
-      <CardTitle className="text-sm flex_between ">
+    <Card className="p-4 rounded-2xl w-full font-medium">
+      <CardTitle className="text-sm flex_between">
         <span className="tracking-normal">{heading}</span>
         <span className="text-sidebar">View All</span>
       </CardTitle>
@@ -38,20 +39,9 @@ const ArrayOfCards: FC<ArrayOfCardsProps> = ({ heading, data }) => {
                   </Card>
                 )}
                 <div className="flex text-sm flex-col gap-1">
-                  {Object.keys(item).map((key, idx) => {
-                    // Skipping img // the image has index 1
-                    if (key === "img") return null;
-                    return (
-                      <span
-                        key={key}
-                        className={`font-light ${
-                          idx > 1 ? "text-[#515151]" : ""
-                        }`}
-                      >
-                        {item[key]}
-                      </span>
-                    );
-                  })}
+                  <span className="font-light">{item.company_name}</span>
+                  {item.name && <span className="font-light text-[#515151]">{item.name}</span>}
+                  {/* Handle any other fields here */}
                 </div>
               </div>
 
@@ -69,5 +59,3 @@ const ArrayOfCards: FC<ArrayOfCardsProps> = ({ heading, data }) => {
 };
 
 export default ArrayOfCards;
-
-
