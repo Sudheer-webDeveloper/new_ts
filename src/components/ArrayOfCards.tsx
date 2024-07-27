@@ -5,8 +5,11 @@ import Image from "next/image";
 interface CardData {
   img?: string;
   company_name: string;
-  name?: string; // Optional additional fields
-  // Other optional fields
+  designation:string;
+  name?: string; 
+  institute?: string;
+  yearZone?: string;
+
 }
 
 interface ArrayOfCardsProps {
