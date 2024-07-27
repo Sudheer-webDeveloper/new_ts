@@ -13,10 +13,11 @@ import checkbox_verifications from '../config/checkBoxVerifications.json';
 import ProfileCard from "@/components/ProfileCard";
 import { useStateContext } from "@/contexts/StateContext";
 import { Skeleton } from "@/components/ui/skeleton";
-import { CardSkeleton } from "./profile/[profileId]/page";
+
 import DashboardCards from "@/components/DashboardCards";
 import DashboardTable from "@/components/DashboardTable";
 import FakeSkeleton from "@/components/FakeSkeleton";
+import CardSkeleton from "@/components/CardSkeleton";
 
 interface CheckboxVerification {
   name: string;

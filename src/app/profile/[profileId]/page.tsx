@@ -11,8 +11,10 @@ import ArrayOfCards from "@/components/ArrayOfCards";
 import Image from "next/image";
 import { FirstAidKit, Link } from "phosphor-react/dist";
 import PostCard from "@/components/PostCard";
-import { FakeSkeleton } from "@/app/page";
 import { Skeleton } from "@/components/ui/skeleton";
+import CardSkeleton from "@/components/CardSkeleton";
+import ChatCard from "@/components/ChatCard";
+import FakeSkeleton from "@/components/FakeSkeleton";
 
 const ProfileById: React.FC = () => {
   const { dummyUser, setPostModal, posts, fetchPostsData } = useStateContext();
@@ -138,29 +140,3 @@ const ProfileById: React.FC = () => {
 
 export default ProfileById;
 
-interface CardSkeletonProps {
-  length: number;
-}
-
-export const CardSkeleton: React.FC<CardSkeletonProps> = ({ length }) => {
-  return (
-    <Card className="p-6 w-full flex flex-col rounded-2xl gap-4">
-      <div className="w-full flex gap-2">
-        <Skeleton className="w-2/5 h-3" />
-        <Skeleton className="w-2/5 h-3" />
-      </div>
-      {Array.from({ length }).map((_, index) => (
-        <Skeleton key={index} className="w-full h-12 mt-2" />
-      ))}
-    </Card>
-  );
-};
-
-export const ChatCard: React.FC = () => {
-  return (
-    <Card className="p-6 rounded-2xl flex items-start flex-col gap-2.5">
-      <Skeleton className="w-full h-10" />
-      <Skeleton className=" w-2/4 h-10" />
-    </Card>
-  );
-};
