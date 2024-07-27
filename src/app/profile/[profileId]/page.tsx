@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import ProfileCard from "@/components/ProfileCard";
 import { useStateContext } from "@/contexts/StateContext";
 import { Card } from "@/components/ui/card";
-import peopleYouMayKnow from "../../../config/peopleYouMayKnow.json";
+import peopleYouMayKnow from "../../../config/PeopleYouMayKnow.json";
 import sugesstedFollows from "../../../config/SuggestedFollows.json";
 import sugesstedJobs from "../../../config/SuggestedJobs.json";
 import { Button } from "@/components/ui/button";
@@ -129,7 +129,7 @@ const ProfileById: React.FC = () => {
         {loading ? (
           <CardSkeleton length={2} />
         ) : (
-          <ArrayOfCards data={peopleYouMayKnow} heading={"People You May Know"} />
+          <ArrayOfCards heading={"People You May Know"} data={peopleYouMayKnow}  />
         )}
       </div>
     </section>

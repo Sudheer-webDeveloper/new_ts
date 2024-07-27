@@ -10,7 +10,7 @@ import { checkPath } from "@/Constants/Constants";
 import { useStateContext } from "@/contexts/StateContext";
 import PostModal from "./PostModal";
 import { List } from "lucide-react";
-import LogoIcon from "../../public/assets/logo";
+import LogoIcon from "../../public/assets/Logo";
 
 
 const Navbar: React.FC = () => {
