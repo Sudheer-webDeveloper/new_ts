@@ -1,7 +1,8 @@
 import { ArrowDownRight, CalendarBlank, Users, Wallet } from "phosphor-react";
 import dashboardCards from "../config/DashboardCards.json";
-import { FakeSkeleton } from "@/app/page";
+
 import { Card } from "./ui/card";
+import FakeSkeleton from "./FakeSkeleton";
 
 interface DashboardCard {
   label: string;
